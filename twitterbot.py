@@ -26,6 +26,7 @@ def reservoir(iterator):
 
     Reservoir algorithm from http://stackoverflow.com/a/3540315/250241/
     """
+    
     select = next(iterator)
     for num, item in enumerate(iterator):
         if random.randrange(num + 2):
@@ -46,6 +47,7 @@ def get_line(file_name):
 
 def tweet(sentence):
     """Tweet sentence to Twitter."""
+    
     try:
         sys.stdout.write("{} {}\n".format(len(sentence), sentence))
         twitter.update_status(status=sentence)
@@ -55,6 +57,7 @@ def tweet(sentence):
 
 def do_tweet(file_name):
     """Get line and tweet it"""
+    
     line = get_line(file_name)
     tweet(line)
 
